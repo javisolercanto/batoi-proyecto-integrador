@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: FFF;" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerMain">
+   <children>
+      <ImageView id="ViewRoutes" fx:id="btnroutes" disable="false" layoutX="181.0" layoutY="87.0" onMouseClicked="#openRoutes">
+         <image>
+            <Image url="@images/map.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView id="ViewStock" fx:id="btnStock" layoutX="452.0" layoutY="91.0" onMouseClicked="#openStock">
+         <image>
+            <Image url="@images/stock.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView id="ViewOrders" fx:id="btnorders" disable="false" layoutX="452.0" layoutY="298.0" onMouseClicked="#openOrders">
+         <image>
+            <Image url="@images/orders.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView id="ViewTruckTracking" fx:id="btntrucktrucking" disable="false" layoutX="181.0" layoutY="294.0" onMouseClicked="#openTruckTracking">
+         <image>
+            <Image url="@images/site.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <AnchorPane layoutX="750.0" prefHeight="500.0" prefWidth="250.0" style="-fx-background-color: F20000;" stylesheets="@css/style.css">
+         <children>
+            <ImageView layoutX="77.0" layoutY="194.0" onMouseClicked="#exitApp">
+               <image>
+                  <Image url="@images/off-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Text fill="WHITE" layoutX="80.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DISCONNECT">
+               <font>
+                  <Font name="Ubuntu Bold" size="14.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <Text layoutX="201.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ROUTES">
+         <font>
+            <Font name="Ubuntu Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="477.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STOCK">
+         <font>
+            <Font name="Ubuntu Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="472.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORDERS">
+         <font>
+            <Font name="Ubuntu Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="168.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRUCK TRACKING">
+         <font>
+            <Font name="Ubuntu Bold" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

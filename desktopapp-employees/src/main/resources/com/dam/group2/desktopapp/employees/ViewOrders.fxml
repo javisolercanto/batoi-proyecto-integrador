@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: FFF;" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerOrders">
+   <children>
+      <AnchorPane layoutX="750.0" prefHeight="500.0" prefWidth="250.0" style="-fx-background-color: F20000;" stylesheets="@css/style.css">
+         <children>
+            <ImageView fx:id="btnGenerateDelivery" layoutX="77.0" layoutY="50.0" onMouseClicked="#generateDeliveryNote">
+               <image>
+                  <Image url="@images/delivery_note_white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnBack" layoutX="77.0" layoutY="353.0" onMouseClicked="#back">
+               <image>
+                  <Image url="@images/back-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnViewDelivery" layoutX="77.0" layoutY="202.0" onMouseClicked="#changeView">
+               <image>
+                  <Image url="@images/view-deliveryNotes.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Text fx:id="txtGenerate" fill="WHITE" layoutX="38.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GENERATE DELIVERY NOTE">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtChangeMode" fill="WHITE" layoutX="52.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VIEW DELIVERY NOTES">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="75.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GENERATE BILL" visible="false">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="80.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VIEW ORDERS" visible="false">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="btnGenerateBills" layoutX="77.0" layoutY="50.0" onMouseClicked="#generateBills" visible="false">
+               <image>
+                  <Image url="@images/bill.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnViewOrders" layoutX="77.0" layoutY="202.0" onMouseClicked="#changeView" visible="false">
+               <image>
+                  <Image url="@images/orders-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableViewDeliveryNote" layoutX="14.0" layoutY="65.0" onKeyPressed="#showdeliveryNote" prefHeight="184.0" prefWidth="720.0" visible="false">
+         <columns>
+            <TableColumn fx:id="cdDate" prefWidth="130.0" text="Date" />
+            <TableColumn fx:id="cdAddress" prefWidth="250.0" text="Address" />
+            <TableColumn fx:id="cdCustomer" prefWidth="200.0" text="Customer" />
+            <TableColumn fx:id="cdStatus" prefWidth="135.0" text="Status" />
+         </columns></TableView>
+      <TableView fx:id="tableViewOrders" layoutX="14.0" layoutY="65.0" onKeyPressed="#showOrders" prefHeight="421.0" prefWidth="720.0" style="-fx-border-color: #FFF;" stylesheets="@css/style.css">
+         <columns>
+            <TableColumn fx:id="cDate" prefWidth="130.0" text="DATE" />
+            <TableColumn fx:id="cAddress" prefWidth="250.0" text="ADDRESS" />
+            <TableColumn fx:id="cCustomer" prefWidth="200.0" text="CUSTOMER" />
+            <TableColumn fx:id="cStatus" prefWidth="135.0" text="STATUS" />
+         </columns></TableView>
+      <Text fx:id="textOrders" layoutX="332.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORDERS">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="textDelivery" layoutX="287.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DELIVERY NOTES" visible="false">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableViewBills" layoutX="24.0" layoutY="304.0" onKeyPressed="#showdeliveryNote" prefHeight="184.0" prefWidth="720.0" visible="false">
+         <columns>
+            <TableColumn fx:id="cbDate" prefWidth="130.0" text="Date" />
+            <TableColumn fx:id="cbAddress" prefWidth="250.0" text="Address" />
+            <TableColumn fx:id="cbCustomer" prefWidth="200.0" text="Customer" />
+            <TableColumn fx:id="cbStatus" prefWidth="135.0" text="Status" />
+         </columns>
+         <opaqueInsets>
+            <Insets top="-14.0" />
+         </opaqueInsets>
+      </TableView>
+      <Text fx:id="textBills" layoutX="346.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BILLS" visible="false">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="checkPending" layoutX="716.0" layoutY="23.0" mnemonicParsing="false" onAction="#clickCheckPending" />
+      <Text layoutX="571.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Only Pending Orders">
+         <font>
+            <Font name="Ubuntu Bold" size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

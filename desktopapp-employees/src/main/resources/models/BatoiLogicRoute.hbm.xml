@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 feb. 2020 0:21:54 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="models.BatoiLogicRoute" table="batoi_logic_route" schema="public" optimistic-lock="version">
+        <comment>batoi_logic.route</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="batoiLogicDeliveryMan" class="models.BatoiLogicDeliveryMan" fetch="select">
+            <column name="deliveryman_id" not-null="true">
+                <comment>Deliveryman with this route</comment>
+            </column>
+        </many-to-one>
+        <property name="createUid" type="java.lang.Integer">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="writeUid" type="java.lang.Integer">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <set name="batoiLogicDeliveryNotes" table="batoi_logic_delivery_note" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="route_id">
+                    <comment>Route</comment>
+                </column>
+            </key>
+            <one-to-many class="models.BatoiLogicDeliveryNote" />
+        </set>
+    </class>
+</hibernate-mapping>

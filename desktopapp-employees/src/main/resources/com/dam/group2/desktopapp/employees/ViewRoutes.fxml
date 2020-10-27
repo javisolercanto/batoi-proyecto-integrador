@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: FFF;" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerOrders">
+   <children>
+      <AnchorPane layoutX="750.0" prefHeight="500.0" prefWidth="250.0" style="-fx-background-color: F20000;" stylesheets="@css/style.css">
+         <children>
+            <ImageView fx:id="btnGenerateDelivery" layoutX="77.0" layoutY="50.0" onMouseClicked="#generateDeliveryNote">
+               <image>
+                  <Image url="@images/delivery_note_white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnBack" layoutX="77.0" layoutY="353.0" onMouseClicked="#back">
+               <image>
+                  <Image url="@images/back-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnViewDelivery" layoutX="77.0" layoutY="202.0" onMouseClicked="#changeView">
+               <image>
+                  <Image url="@images/view-deliveryNotes.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Text fill="WHITE" layoutX="38.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GENERATE DELIVERY NOTE">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="52.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VIEW DELIVERY NOTES">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="75.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GENERATE BILL" visible="false">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="80.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VIEW ORDERS" visible="false">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="btnGenerateBills" layoutX="77.0" layoutY="50.0" onMouseClicked="#generateDeliveryNote" visible="false">
+               <image>
+                  <Image url="@images/bill_white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnViewOrders" layoutX="77.0" layoutY="202.0" onMouseClicked="#changeView" visible="false">
+               <image>
+                  <Image url="@images/orders-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableViewOrders" layoutX="14.0" layoutY="65.0" onKeyPressed="#showOrders" prefHeight="421.0" prefWidth="720.0" style="-fx-border-color: #FFF;" stylesheets="@css/style.css" />
+      <TableView fx:id="tableViewDeliveryNote" layoutY="54.0" onKeyPressed="#showdeliveryNote" prefHeight="446.0" prefWidth="750.0" visible="false" />
+      <Text fx:id="textOrders" layoutX="332.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORDERS">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="textDelivery" layoutX="287.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DELIVERY NOTES" visible="false">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: FFF;" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerProfile">
+   <children>
+      <AnchorPane layoutX="750.0" prefHeight="500.0" prefWidth="250.0" style="-fx-background-color: F20000;" stylesheets="@css/style.css">
+         <children>
+            <ImageView fx:id="btnSave" layoutX="77.0" layoutY="50.0" onMouseClicked="#saveChanges">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@images/save-white.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnBack" layoutX="77.0" layoutY="353.0" onMouseClicked="#back">
+               <image>
+                  <Image url="@images/back-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnRemoveAccount" layoutX="77.0" layoutY="202.0" onMouseClicked="#cancelAccount">
+               <image>
+                  <Image url="@images/delete-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Text fill="WHITE" layoutX="75.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAVE CHANGES">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="66.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CANCEL ACCOUNT">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text layoutX="331.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="41.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER">
+         <font>
+            <Font name="Ubuntu" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="41.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD">
+         <font>
+            <Font name="Ubuntu" size="13.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="374.0" layoutY="368.0" prefHeight="90.0" prefWidth="358.0" style="-fx-background-color: F20000;" />
+      <AnchorPane layoutX="374.0" layoutY="87.0" prefHeight="371.0" prefWidth="358.0" style="-fx-border-color: #000;">
+         <children>
+            <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADDRESSES">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="cbAddress" layoutX="14.0" layoutY="50.0" onAction="#chooseAddress" prefHeight="26.0" prefWidth="330.0" stylesheets="@css/style.css" />
+            <ImageView fx:id="btnRemove" fitHeight="64.0" fitWidth="64.0" layoutX="265.0" layoutY="293.0" onMouseClicked="#removeAddress">
+               <image>
+                  <Image url="@images/remove-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnEdit" fitHeight="64.0" fitWidth="64.0" layoutX="147.0" layoutY="293.0" onMouseClicked="#editAddress">
+               <image>
+                  <Image url="@images/edit-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnAdd" fitHeight="64.0" fitWidth="64.0" layoutX="29.0" layoutY="293.0" onMouseClicked="#addAddress">
+               <image>
+                  <Image url="@images/addCircle-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <TextField id="login-field" fx:id="tfStreet" layoutX="16.0" layoutY="133.0" prefHeight="33.0" prefWidth="173.0" stylesheets="@css/style.css">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Text layoutX="16.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STREET">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="257.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CODE">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CITY">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="188.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROVINCE">
+               <font>
+                  <Font name="Ubuntu" size="13.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="cbCity" disable="true" layoutX="10.0" layoutY="230.0" prefWidth="155.0" />
+            <TextField id="login-field" fx:id="tfProvince" editable="false" layoutX="188.0" layoutY="223.0" prefHeight="33.0" prefWidth="155.0" />
+            <TextField id="login-field" fx:id="tfPostalCode" layoutX="199.0" layoutY="133.0" onKeyTyped="#typingPostalCode" prefHeight="33.0" prefWidth="149.0" stylesheets="@css/style.css">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <TextField id="login-field" fx:id="tfName" layoutX="41.0" layoutY="102.0" stylesheets="@css/style.css">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField id="login-field" fx:id="tfUser" layoutX="41.0" layoutY="178.0" stylesheets="@css/style.css">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <PasswordField id="login-field" fx:id="tfPassword" layoutX="41.0" layoutY="264.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+      <Text layoutX="41.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAME &amp; SURNAME">
+         <font>
+            <Font name="Ubuntu" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="41.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EMAIL">
+         <font>
+            <Font name="Ubuntu" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="41.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PHONE">
+         <font>
+            <Font name="Ubuntu" size="13.0" />
+         </font>
+      </Text>
+      <TextField id="login-field" fx:id="tfEmail" layoutX="41.0" layoutY="343.0" stylesheets="@css/style.css">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField id="login-field" fx:id="tfPhone" layoutX="41.0" layoutY="425.0" stylesheets="@css/style.css">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

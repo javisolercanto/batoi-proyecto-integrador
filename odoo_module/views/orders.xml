@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- actions opening views on models -->
+        <act_window id="go_to_orders"
+                    name="Orders"
+                    res_model="batoi_logic.order"
+                    view_mode="tree,kanban,form"/>
+
+        <!-- Top menu item -->
+        <menuitem name="Orders"
+                  id="orders_menu"
+                  parent="main_menu_root"
+                  action="go_to_orders"/>
+
+        <!-- Form view -->
+        <record model="ir.ui.view" id="main_form_orders">
+            <field name="name">Orders Form</field>
+            <field name="model">batoi_logic.order</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                    </header>
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="name"/>
+                                <field name="date"/>
+                                <field name="status"/>
+                                <field name="information"/>
+                                <field name="address_id"/>
+                            </group>
+			    <group name="group_right">
+                                <field name="customer_id"/>
+                                <field name="lines"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Tree view -->
+        <record id="view_tree_orders" model="ir.ui.view">
+            <field name="name">Orders</field>
+            <field name="model">batoi_logic.order</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="status"/>
+                    <field name="information"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Filters and search options -->
+        <record id="view_filter_providers" model="ir.ui.view">
+            <field name="name">Orders</field>
+            <field name="model">batoi_logic.order</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="status"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>

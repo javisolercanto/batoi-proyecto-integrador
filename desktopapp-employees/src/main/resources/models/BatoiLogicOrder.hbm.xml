@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 feb. 2020 0:21:54 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="models.BatoiLogicOrder" table="batoi_logic_order" schema="public" optimistic-lock="version">
+        <comment>batoi_logic.order</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="batoiLogicAddress" class="models.BatoiLogicAddress" fetch="select">
+            <column name="address_id" not-null="true">
+                <comment>Address</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="batoiLogicCustomer" class="models.BatoiLogicCustomer" fetch="select">
+            <column name="customer_id" not-null="true">
+                <comment>Customer</comment>
+            </column>
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="30" not-null="true" unique="true">
+                <comment>orderNumber</comment>
+            </column>
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="13">
+                <comment>Request Date</comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="status">
+                <comment>Order status</comment>
+            </column>
+        </property>
+        <property name="information" type="string">
+            <column name="information">
+                <comment>About the delivery</comment>
+            </column>
+        </property>
+        <property name="createUid" type="java.lang.Integer">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="writeUid" type="java.lang.Integer">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <set name="batoiLogicDeliveryNotes" table="batoi_logic_delivery_note" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="order_id" not-null="true" unique="true">
+                    <comment>Associated Order</comment>
+                </column>
+            </key>
+            <one-to-many class="models.BatoiLogicDeliveryNote" />
+        </set>
+        <set name="batoiLogicOrderLines" table="batoi_logic_order_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="order_id" not-null="true">
+                    <comment>Order</comment>
+                </column>
+            </key>
+            <one-to-many class="models.BatoiLogicOrderLine" />
+        </set>
+    </class>
+</hibernate-mapping>

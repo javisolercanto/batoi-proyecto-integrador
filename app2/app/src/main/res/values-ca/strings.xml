@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="navigation_drawer_open">Obrir capçelera de navegació</string>
+    <string name="navigation_drawer_close">Tancar capçelera de navegació</string>
+    <string name="nav_header_desc">Capçelera de navegació</string>
+    <string name="action_settings">Opcions</string>
+
+    <string name="menu_home">Inici</string>
+    <string name="menu_map">Mapa</string>
+
+    <string name="btLogin">Inicia Sesió</string>
+    <string name="tvPassword">Contrasenya</string>
+    <string name="tvName">Usuari</string>
+
+    <string name="activity_login">Inici De Sesió</string>
+    <string name="itLogOut">Tanca Sesió</string>
+    <string name="nav_orders">Comandes</string>
+
+    <string name="distribution_center">Centre De Distribució</string>
+    <string name="tvStatus">ESTAT</string>
+    <string name="etObservations">Observacions</string>
+    <string name="btnCancel">CANCELA</string>
+    <string name="btnAccept">ACEPTA</string>
+
+    <string-array name="status">
+        <item>Repartint</item>
+        <item>Entregat</item>
+        <item>No Repartit</item>
+    </string-array>
+
+    <string-array name="actions">
+        <item>Obrir Telèfon</item>
+        <item>Obrir Email</item>
+        <!--        <item></item>-->
+    </string-array>
+    <string name="welcome">Benvingut</string>
+    <string name="address_incorrect">Direcció Incorrecta</string>
+    <string name="confirmation">Confirmar</string>
+    <string name="interrupted">Interromput</string>
+    <string name="select_the_action">Selecciona La Acció</string>
+    <string name="send_mail">Envia mail...</string>
+    <string name="about_your_order">Sobre el seu pedit</string>
+    <string name="action">Acció</string>
+    <string name="customer">CLIENT:</string>
+    <string name="empty_fields">Camps Buits</string>
+    <string name="impossible_to_update">És impossible actualitzar ESTATUS ara mateix!</string>
+    <string name="location">LOCALIZACIÓ:</string>
+    <string name="location_not_found">Ubicació no trobada</string>
+    <string name="network_not_available">Xarxa no disponible, torneu-ho a provar més endavant</string>
+    <string name="nickname_not_found">No s´ha trobat el nom de usuari</string>
+    <string name="no_internet">No hi ha Internet, torna-ho a provar més tard!</string>
+    <string name="no_phone_available">No hi ha telèfon disponible!</string>
+    <string name="order_number">NÚMERO D´ORDRE:</string>
+    <string name="password_incorrect">Contrasenya Erronea</string>
+    <string name="retrieving_information">Recuperan Informació...</string>
+    <string name="this_action">Aquesta acció no es pot desfer, esteu segur d’actualitzar a %1$s ?</string>
+    <string name="customer_customer">1 - Client Client</string>
+    <string name="permissions_neccesary">Aquest permis es neccesari!</string>
+    <string name="location_enable">La ubicació ha de ser habilitada!</string>
+    <string name="error">Error</string>
+    <string name="ok" translatable="false">D´acord</string>
+    <string name="action_refresh">Actualiza</string>
+    <string name="location_service_is_needed">El servei d’ubicació es necessita TOT EL TEMPS</string>
+    <string name="no_internet_available">Internet no dispobible</string>
+    <string name="alert_location">NOMBRE DE COMANDA: %1$s \nCLIENT:%2$s \nLOCALITZACIÓ: %3$s</string>
+</resources>

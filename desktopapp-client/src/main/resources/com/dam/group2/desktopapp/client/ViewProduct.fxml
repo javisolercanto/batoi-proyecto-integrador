@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: FFF;" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerProduct">
+   <children>
+      <AnchorPane layoutX="750.0" prefHeight="500.0" prefWidth="250.0" style="-fx-background-color: F20000;" stylesheets="@css/style.css">
+         <children>
+            <ImageView fx:id="btnCart" layoutX="77.0" layoutY="50.0" onMouseClicked="#openCart">
+               <image>
+                  <Image url="@images/cart-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnBack" layoutX="77.0" layoutY="353.0" onMouseClicked="#back">
+               <image>
+                  <Image url="@images/back-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Text fill="WHITE" layoutX="73.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SHOPPING CART">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="btnAdd" layoutX="77.0" layoutY="194.0" onMouseClicked="#addToCart">
+               <image>
+                  <Image url="@images/add-cart-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Text fill="WHITE" layoutX="81.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD TO CART">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="tfNumItems" fill="WHITE" layoutX="158.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="Ubuntu Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text layoutX="281.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRODUCT DETAILS">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="image" fitHeight="230.0" fitWidth="340.0" layoutX="35.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" />
+      <Text fx:id="textName" layoutX="419.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" wrappingWidth="293.5234375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="textPrice" layoutX="419.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="500€" wrappingWidth="128.5234375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="textStock" fill="#399a00" layoutX="584.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="128.5234375">
+         <font>
+            <Font name="Ubuntu Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextArea id="observations-text-field" fx:id="textAreaDescription" editable="false" layoutX="419.0" layoutY="306.0" prefHeight="69.0" prefWidth="294.0" stylesheets="@css/style.css">
+         <font>
+            <Font name="Ubuntu" size="15.0" />
+         </font>
+      </TextArea>
+      <Pane fx:id="toast" layoutX="14.0" layoutY="14.0" prefHeight="85.0" prefWidth="200.0" style="-fx-background-color: F20000; -fx-background-radius: 10; -fx-opacity: 10;" visible="false">
+         <children>
+            <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="7.0" layoutY="11.0">
+               <image>
+                  <Image url="@images/check-white.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="77.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRODUCT ADDED">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

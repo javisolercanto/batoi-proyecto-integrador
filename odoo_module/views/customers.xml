@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- actions opening views on models -->
+        <act_window id="go_to_customers"
+                    name="Customers"
+                    res_model="batoi_logic.customer"
+                    view_mode="tree,kanban,form"/>
+
+        <!-- Top menu item -->
+        <menuitem name="Batoi Logic" id="main_menu_root"/>
+        <menuitem name="Customers"
+                  id="customers_menu"
+                  parent="main_menu_root"
+                  action="go_to_customers"/>
+
+        <!-- Form view -->
+        <record model="ir.ui.view" id="main_form_customers">
+            <field name="name">Customer Form</field>
+            <field name="model">batoi_logic.customer</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                    </header>
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="name"/>
+                                <field name="nickname"/>
+                                <field name="password"/>
+                                <field name="phone"/>
+                                <field name="email"/>
+                            </group>
+			                <group name="group_right">
+                                <field name="addresses"/>
+                                <field name="orders"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Tree view -->
+        <record id="view_tree_customers" model="ir.ui.view">
+            <field name="name">Customers</field>
+            <field name="model">batoi_logic.customer</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="nickname"/>
+                    <field name="password"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Filters and search options -->
+        <record id="view_filter_customers" model="ir.ui.view">
+            <field name="name">Customers</field>
+            <field name="model">batoi_logic.customer</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="nickname"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>
+

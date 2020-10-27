@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 feb. 2020 0:21:54 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="models.BatoiLogicProvider" table="batoi_logic_provider" schema="public" optimistic-lock="version">
+        <comment>batoi_logic.provider</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="40" not-null="true" unique="true">
+                <comment>Provider Name</comment>
+            </column>
+        </property>
+        <property name="cif" type="string">
+            <column name="cif" length="9" not-null="true">
+                <comment>Cif</comment>
+            </column>
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="30">
+                <comment>E-mail</comment>
+            </column>
+        </property>
+        <property name="telephone" type="java.lang.Integer">
+            <column name="telephone">
+                <comment>Telephone</comment>
+            </column>
+        </property>
+        <property name="createUid" type="java.lang.Integer">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="writeUid" type="java.lang.Integer">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <set name="batoiLogicProviderBatoiLogicSupplierOrderRels" table="batoi_logic_provider_batoi_logic_supplier_order_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="batoi_logic_provider_id" not-null="true" />
+            </key>
+            <one-to-many class="models.BatoiLogicProviderBatoiLogicSupplierOrderRel" />
+        </set>
+        <set name="batoiLogicProductBatoiLogicProviderRels" table="batoi_logic_product_batoi_logic_provider_rel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="batoi_logic_provider_id" not-null="true" />
+            </key>
+            <one-to-many class="models.BatoiLogicProductBatoiLogicProviderRel" />
+        </set>
+        <set name="batoiLogicSupplierOrders" table="batoi_logic_supplier_order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="provider_id" not-null="true">
+                    <comment>Provider</comment>
+                </column>
+            </key>
+            <one-to-many class="models.BatoiLogicSupplierOrder" />
+        </set>
+    </class>
+</hibernate-mapping>

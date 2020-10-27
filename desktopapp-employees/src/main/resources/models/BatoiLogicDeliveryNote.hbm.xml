@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 feb. 2020 0:21:54 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="models.BatoiLogicDeliveryNote" table="batoi_logic_delivery_note" schema="public" optimistic-lock="version">
+        <comment>batoi_logic.delivery_note</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="batoiLogicOrder" class="models.BatoiLogicOrder" fetch="select">
+            <column name="order_id" not-null="true" unique="true">
+                <comment>Associated Order</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="batoiLogicRoute" class="models.BatoiLogicRoute" fetch="select">
+            <column name="route_id">
+                <comment>Route</comment>
+            </column>
+        </many-to-one>
+        <property name="notes" type="string">
+            <column name="notes">
+                <comment>Notes</comment>
+            </column>
+        </property>
+        <property name="createUid" type="java.lang.Integer">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="writeUid" type="java.lang.Integer">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <set name="batoiLogicBills" table="batoi_logic_bill" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="deliverynote_id" not-null="true" unique="true">
+                    <comment>Delivery note</comment>
+                </column>
+            </key>
+            <one-to-many class="models.BatoiLogicBill" />
+        </set>
+    </class>
+</hibernate-mapping>

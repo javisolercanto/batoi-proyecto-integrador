@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: FFF;" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerOrders">
+   <children>
+      <AnchorPane layoutX="750.0" prefHeight="500.0" prefWidth="250.0" style="-fx-background-color: F20000;" stylesheets="@css/style.css">
+         <children>
+            <ImageView fx:id="btnTracking" layoutX="77.0" layoutY="50.0" onMouseClicked="#openTracking">
+               <image>
+                  <Image url="@images/truck-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnBack" layoutX="77.0" layoutY="353.0" onMouseClicked="#back">
+               <image>
+                  <Image url="@images/back-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnHistoryOrPending" layoutX="77.0" layoutY="202.0" onMouseClicked="#openHistoryOrPending">
+               <image>
+                  <Image url="@images/history-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Text fill="WHITE" layoutX="92.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRACKING">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="textHistoryOrPending" fill="WHITE" layoutX="97.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HISTORY">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tvOrders" layoutX="14.0" layoutY="65.0" onMouseClicked="#onTableClicked" prefHeight="421.0" prefWidth="720.0" style="-fx-border-color: #FFF;" stylesheets="@css/style.css">
+         <columns>
+            <TableColumn fx:id="cOrderNumber" editable="false" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" sortable="false" text="Order Number" />
+            <TableColumn fx:id="cDate" editable="false" maxWidth="240.0" minWidth="240.0" prefWidth="240.0" sortable="false" text="Order Date" />
+            <TableColumn fx:id="cLines" editable="false" maxWidth="80.0" minWidth="80.0" sortable="false" text="Lines" />
+            <TableColumn fx:id="cStatus" editable="false" maxWidth="210.0" minWidth="210.0" prefWidth="210.0" sortable="false" text="Current Status" />
+         </columns></TableView>
+      <Text fx:id="header" layoutX="258.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MY ORDERS - PENDING">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <ProgressBar fx:id="pbLoad" layoutX="265.0" layoutY="279.0" prefWidth="200.0" progress="0.0" stylesheets="@css/style.css" />
+   </children>
+</AnchorPane>

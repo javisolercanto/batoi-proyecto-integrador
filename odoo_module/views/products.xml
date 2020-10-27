@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- actions opening views on models -->
+        <act_window id="go_to_products"
+                    name="Products"
+                    res_model="batoi_logic.product"
+                    view_mode="tree,kanban,form"/>
+
+        <!-- Top menu item -->
+        <menuitem name="Products"
+                  id="products_menu"
+                  parent="main_menu_root"
+                  action="go_to_products"/>
+
+        <!-- Form view -->
+        <record model="ir.ui.view" id="main_form_products">
+            <field name="name">Products Form</field>
+            <field name="model">batoi_logic.product</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                    </header>
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="name"/>
+                                <field name="price"/>
+                                <field name="kg"/>
+                                <field name="description"/>
+                                <field name="image"/>
+                            </group>
+			                <group name="group_right">
+                                <field name="order_lines_id"/>
+                                <field name="supply_provider_id"/>
+                                <field name="providers_available"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Tree view -->
+        <record id="view_tree_products" model="ir.ui.view">
+            <field name="name">Products</field>
+            <field name="model">batoi_logic.product</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="price" sum="Total Amount"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Filters and search options -->
+        <record id="view_filter_products" model="ir.ui.view">
+            <field name="name">Products</field>
+            <field name="model">batoi_logic.product</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="price"/>
+                    <filter name="filter_price_gt30" string="Price greater or equal to 30" domain="[('price', '>=', '30')]"/>
+                    <filter name="filter_price_gt60" string="Price greater or equal to 60" domain="[('price', '>=', '60')]"/>
+                    <filter name="filter_price_gt100" string="Price greater or equal to 100" domain="[('price', '>=', '100')]"/>
+                    <filter name="filter_price_gt100" string="Price greater or equal to 1000" domain="[('price', '>=', '1000')]"/> 
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.lynden.gmapsfx.GoogleMapView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: FFF;" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerTruckTracking">
+   <children>
+      <AnchorPane layoutX="750.0" prefHeight="500.0" prefWidth="250.0" style="-fx-background-color: F20000;" stylesheets="@css/style.css">
+         <children>
+            <ImageView layoutX="77.0" layoutY="50.0" onMouseClicked="#findDeliveryman">
+               <image>
+                  <Image url="@images/find-deliveryman-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnBack" layoutX="77.0" layoutY="353.0" onMouseClicked="#back">
+               <image>
+                  <Image url="@images/back-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView layoutX="77.0" layoutY="202.0" onMouseClicked="#reload">
+               <image>
+                  <Image url="@images/refresh-map-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Text fill="WHITE" layoutX="60.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FIND DELIVERYMAN">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="96.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REFRESH">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text layoutX="287.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRUCK TRACKING">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <GoogleMapView fx:id="mapView" layoutX="17.0" layoutY="45.0" prefHeight="440.0" prefWidth="718.0" />
+   </children>
+</AnchorPane>

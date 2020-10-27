@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="navigation_drawer_open">Abrir encabezado de navegación</string>
+    <string name="navigation_drawer_close">Cerrar encabezado de navegación</string>
+    <string name="nav_header_desc">Encabezado de navegación</string>
+    <string name="action_settings">Opciones</string>
+
+    <string name="menu_home">Inicio</string>
+    <string name="menu_map">Mapa</string>
+
+    <string name="btLogin">Iniciar Sesión</string>
+    <string name="tvPassword">Contraseña</string>
+    <string name="tvName">Usuario</string>
+
+    <string name="activity_login">Inicio De Sesión</string>
+    <string name="itLogOut">Cerrar Sesión</string>
+    <string name="nav_orders">Pedidos</string>
+
+    <string name="distribution_center">Centro De Distribución</string>
+    <string name="tvStatus">ESTADO</string>
+    <string name="etObservations">Observaciones</string>
+    <string name="btnCancel">CANCELAR</string>
+    <string name="btnAccept">ACEPTAR</string>
+
+    <string-array name="status">
+        <item>Repartiendo</item>
+        <item>Entregado</item>
+        <item>No Entregado</item>
+    </string-array>
+
+    <string-array name="actions">
+        <item>Abrir Teléfono</item>
+        <item>Abrir Email</item>
+        <!--        <item></item>-->
+    </string-array>
+    <string name="welcome">Bienvenido</string>
+    <string name="about_your_order">Sobre su pedido</string>
+    <string name="action">Acción</string>
+    <string name="address_incorrect">Dirección Icorrecta</string>
+    <string name="confirmation">Confirmar</string>
+    <string name="interrupted">Interrumpido</string>
+    <string name="select_the_action">Selecciona La Acción</string>
+    <string name="send_mail">Enviar mail...</string>
+    <string name="customer">CLIENTE:</string>
+    <string name="empty_fields">Campos Vacios</string>
+    <string name="impossible_to_update">¡Imposible actualizar el ESTADO ahora mismo!</string>
+    <string name="location">LOCALIZACIÓN:</string>
+    <string name="location_not_found">Ubicación no encontrada</string>
+    <string name="network_not_available">Red no disponible, intente más tarde</string>
+    <string name="nickname_not_found">Usuario no encontrado</string>
+    <string name="no_internet">¡No hay Internet, intente más tarde!</string>
+    <string name="no_phone_available">¡No hay teléfono disponible!</string>
+    <string name="order_number">NUMERO DE PEDIDO:</string>
+    <string name="password_incorrect">Contraseña Incorrecta</string>
+    <string name="retrieving_information">Recuperando información...</string>
+    <string name="this_action">¿Esta acción no se puede deshacer, ¿está seguro de actualizar a %1$s ?</string>
+    <string name="customer_customer">1 - Cliente Cliente</string>
+    <string name="permissions_neccesary">¡Este permiso es neccesario!</string>
+    <string name="location_enable">¡La ubicación DEBE estar habilitada!</string>
+    <string name="error">Error</string>
+    <string name="ok" translatable="false">Okay</string>
+    <string name="action_refresh">Actualizar</string>
+    <string name="location_service_is_needed">Se necesita servicio de ubicación TODO EL TIEMPO</string>
+    <string name="no_internet_available">Internet no disponible</string>
+    <string name="alert_location">NÚMERO DE PEDIDO:% 1 $ s \nCLIENTE:% 2 $ s \nUBICACIÖN: %3$s</string>
+</resources>

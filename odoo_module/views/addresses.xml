@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- actions opening views on models -->
+        <act_window id="go_to_addresses"
+                    name="Addresses"
+                    res_model="batoi_logic.address"
+                    view_mode="tree,kanban,form"/>
+
+        <!-- Top menu item -->
+        <menuitem name="Addresses"
+                  id="addresses_menu"
+                  parent="main_menu_root"
+                  action="go_to_addresses"/>
+
+        <!-- Form view -->
+        <record model="ir.ui.view" id="main_form_addresses">
+            <field name="name">Address Form</field>
+            <field name="model">batoi_logic.address</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                    </header>
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="name"/>
+                                <field name="customer_id"/>
+                                <field name="postal_code_id"/>
+                            </group>
+			                <group name="group_right">
+                                <field name="orders_id"/>
+                                <field name="bills_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Tree view -->
+        <record id="view_tree_addresses" model="ir.ui.view">
+            <field name="name">Addresses</field>
+            <field name="model">batoi_logic.address</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="customer_id"/>
+                    <field name="postal_code_id"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Filters and search options -->
+        <record id="view_filter_addresses" model="ir.ui.view">
+            <field name="name">Addresses</field>
+            <field name="model">batoi_logic.address</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>

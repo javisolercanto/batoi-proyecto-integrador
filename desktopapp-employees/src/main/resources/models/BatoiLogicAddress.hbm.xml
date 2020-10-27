@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 feb. 2020 0:21:54 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="models.BatoiLogicAddress" table="batoi_logic_address" schema="public" optimistic-lock="version">
+        <comment>batoi_logic.address</comment>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="batoiLogicCustomer" class="models.BatoiLogicCustomer" fetch="select">
+            <column name="customer_id" not-null="true">
+                <comment>Customer</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="batoiLogicPostalCode" class="models.BatoiLogicPostalCode" fetch="select">
+            <column name="postal_code_id" not-null="true">
+                <comment>Postal Code</comment>
+            </column>
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="60" not-null="true">
+                <comment>Street Address</comment>
+            </column>
+        </property>
+        <property name="createUid" type="java.lang.Integer">
+            <column name="create_uid">
+                <comment>Created by</comment>
+            </column>
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="29">
+                <comment>Created on</comment>
+            </column>
+        </property>
+        <property name="writeUid" type="java.lang.Integer">
+            <column name="write_uid">
+                <comment>Last Updated by</comment>
+            </column>
+        </property>
+        <property name="writeDate" type="timestamp">
+            <column name="write_date" length="29">
+                <comment>Last Updated on</comment>
+            </column>
+        </property>
+        <set name="batoiLogicOrders" table="batoi_logic_order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="address_id" not-null="true">
+                    <comment>Address</comment>
+                </column>
+            </key>
+            <one-to-many class="models.BatoiLogicOrder" />
+        </set>
+        <set name="batoiLogicBills" table="batoi_logic_bill" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="address_id" not-null="true">
+                    <comment>Associated Address</comment>
+                </column>
+            </key>
+            <one-to-many class="models.BatoiLogicBill" />
+        </set>
+    </class>
+</hibernate-mapping>

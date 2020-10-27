@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_your_order">آپ کے آرڈر کے بارے میں</string>
+    <string name="action">عمل</string>
+    <string name="action_settings">ترتیبات</string>
+    <string name="activity_login">لاگ ان کریں</string>
+    <string name="address_incorrect">پتہ غلط ہے</string>
+    <string name="btLogin">سائن ان</string>
+    <string name="btnAccept">قبول</string>
+    <string name="btnCancel">کینسل</string>
+    <string name="confirmation">تصدیق</string>
+    <string name="customer">صارف:</string>
+    <string name="customer_customer">1 - کسٹمر کسٹمر</string>
+    <string name="distribution_center">تقسیم کا مرکز</string>
+    <string name="empty_fields">خالی جگہیں</string>
+    <string name="etObservations">مشاہدات</string>
+    <string name="impossible_to_update">ابھی STATUS کو اپ ڈیٹ کرنا ناممکن ہے!</string>
+    <string name="interrupted">رکاوٹ ہے</string>
+    <string name="itLogOut">لاگ آوٹ</string>
+    <string name="location">مقام:</string>
+    <string name="location_enable">مقام قابل ہونا چاہئے!</string>
+    <string name="location_not_found">مقام نہیں ملا</string>
+    <string name="menu_home">گھر</string>
+    <string name="menu_map">نقشہ</string>
+    <string name="nav_header_desc">نیویگیشن ہیڈر</string>
+    <string name="nav_orders">احکامات</string>
+    <string name="navigation_drawer_close">نیویگیشن دراز کو بند کریں</string>
+    <string name="navigation_drawer_open">نیویگیشن دراز کھولیں</string>
+    <string name="network_not_available">نیٹ ورک دستیاب نہیں ہے ، براہ کرم بعد میں دوبارہ کوشش کریں</string>
+    <string name="nickname_not_found">عرفیت نہیں ملی</string>
+    <string name="no_internet">انٹرنیٹ نہیں ، بعد میں دوبارہ کوشش کریں!</string>
+    <string name="no_phone_available">کوئی فون دستیاب نہیں!</string>
+    <string name="order_number">ترتیب نمبر:</string>
+    <string name="password_incorrect">پاس ورڈ غلط</string>
+    <string name="permissions_neccesary">یہ اجازت ضروری ہے!</string>
+    <string name="retrieving_information">معلومات کی بازیافت ہو رہی ہے…</string>
+    <string name="select_the_action">ایکشن کو منتخب کریں</string>
+    <string name="send_mail">میل بھیجیں…</string>
+    <string name="this_action">%1$s اس کارروائی کو کالعدم نہیں کیا جاسکتا ، کیا آپ کو اپ ڈیٹ کرنے کے بارے میں یقین ہے</string>
+    <string name="tvName">عرفیت</string>
+    <string name="tvPassword">پاس ورڈ</string>
+    <string name="tvStatus">حالت</string>
+    <string name="welcome">خوش آمدید</string>
+    <string name="error">خرابی</string>
+    <string name="ok" translatable="false">ٹھیک ہے</string>
+
+    <string-array name="status">
+        <item>کی ترسیل کے لئے باہر</item>
+        <item>نجات</item>
+        <item>حوالے نہیں ہوسکی</item>
+    </string-array>
+
+    <string-array name="actions">
+        <item>اوپن فون</item>
+        <item>ای میل کھولیں</item>
+        <!--        <item></item>-->
+    </string-array>
+    <string name="action_refresh">ریفریش</string>
+    <string name="location_service_is_needed">ہر وقت محل وقوع کی خدمت کی ضرورت ہے</string>
+    <string name="no_internet_available">انٹرنیٹ دستیاب نہیں ہے</string>
+    <string name="alert_location">آرڈر نمبر: ٪1$s\n sصارف:٪2$s\n sلوکیشن: ٪3$s</string>
+</resources>

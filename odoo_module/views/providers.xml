@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- actions opening views on models -->
+        <act_window id="go_to_providers"
+                    name="Providers"
+                    res_model="batoi_logic.provider"
+                    view_mode="tree,kanban,form"/>
+
+        <!-- Top menu item -->
+        <menuitem name="Providers"
+                  id="providers_menu"
+                  parent="main_menu_root"
+                  action="go_to_providers"/>
+
+        <!-- Form view -->
+        <record model="ir.ui.view" id="main_form_providers">
+            <field name="name">Provider Form</field>
+            <field name="model">batoi_logic.provider</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                    </header>
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="name"/>
+                                <field name="cif"/>
+                                <field name="email"/>
+                                <field name="telephone"/>
+                            </group>
+			                <group name="group_right">
+                                <field name="supplier_orders_id"/>
+                                <field name="products_supplied"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Tree view -->
+        <record id="view_tree_providers" model="ir.ui.view">
+            <field name="name">Providers</field>
+            <field name="model">batoi_logic.provider</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="cif"/>
+                    <field name="email"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Filters and search options -->
+        <record id="view_filter_providers" model="ir.ui.view">
+            <field name="name">Providers</field>
+            <field name="model">batoi_logic.provider</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <filter name="filter_providers" string="Providers with cif that starts with A" domain="[('cif', 'like', 'A')]"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 feb. 2020 0:21:54 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="models.BatoiLogicProductBatoiLogicProviderRel" table="batoi_logic_product_batoi_logic_provider_rel" schema="public" optimistic-lock="version">
+        <comment>RELATION BETWEEN batoi_logic_product AND batoi_logic_provider</comment>
+        <composite-id name="id" class="models.BatoiLogicProductBatoiLogicProviderRelId">
+            <key-property name="batoiLogicProductId" type="int">
+                <column name="batoi_logic_product_id" />
+            </key-property>
+            <key-property name="batoiLogicProviderId" type="int">
+                <column name="batoi_logic_provider_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="batoiLogicProduct" class="models.BatoiLogicProduct" update="false" insert="false" fetch="select">
+            <column name="batoi_logic_product_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="batoiLogicProvider" class="models.BatoiLogicProvider" update="false" insert="false" fetch="select">
+            <column name="batoi_logic_provider_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

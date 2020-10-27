@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: FFF;" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerTracking">
+   <children>
+      <AnchorPane prefHeight="119.0" prefWidth="400.0" style="-fx-background-color: F20000;">
+         <children>
+            <Text fill="WHITE" layoutX="131.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRACKING">
+               <font>
+                  <Font name="Ubuntu Bold" size="48.0" />
+               </font>
+            </Text>
+            <ImageView layoutX="23.0" layoutY="13.0">
+               <image>
+                  <Image url="@images/truck-white.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TextField id="login-field" fx:id="tfTrackingNumber" layoutX="82.0" layoutY="241.0" stylesheets="@css/style.css">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Text layoutX="82.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRACKING NUMBER">
+         <font>
+            <Font name="Ubuntu" size="13.0" />
+         </font>
+      </Text>
+      <Button id="login-button" fx:id="btnSearch" layoutX="152.0" layoutY="348.0" mnemonicParsing="false" stylesheets="@css/style.css" text="SEARCH">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="btnBack" fitHeight="32.0" fitWidth="32.0" layoutX="82.0" layoutY="349.0" onMouseClicked="#back">
+         <image>
+            <Image url="@images/back.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

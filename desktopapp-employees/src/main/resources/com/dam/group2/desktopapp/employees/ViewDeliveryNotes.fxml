@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.lynden.gmapsfx.GoogleMapView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1000.0" style="-fx-background-color: FFF;" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerDeliveryNotes">
+   <children>
+      <AnchorPane layoutX="750.0" prefHeight="500.0" prefWidth="250.0" style="-fx-background-color: F20000;" stylesheets="@css/style.css">
+         <children>
+            <ImageView fx:id="btnGenerate" layoutX="78.0" layoutY="50.0" onMouseClicked="#generateRoutes">
+               <image>
+                  <Image url="@images/baseline_explore_white_48dp.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnBack" layoutX="78.0" layoutY="353.0" onMouseClicked="#back">
+               <image>
+                  <Image url="@images/back-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Text fx:id="textRoutes" fill="WHITE" layoutX="64.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GENERATE ROUTES">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="btnViewRoutes" layoutX="77.0" layoutY="202.0" onMouseClicked="#viewRoutesOrOrders">
+               <image>
+                  <Image url="@images/nav-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Text fx:id="textRoutes" fill="WHITE" layoutX="82.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VIEW ROUTES">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="textNotes" fill="WHITE" layoutX="52.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VIEW DELIVERY NOTES" visible="false">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="btnViewNotes" layoutX="77.0" layoutY="202.0" onMouseClicked="#viewRoutesOrOrders" visible="false">
+               <image>
+                  <Image url="@images/file-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableViewDeliveryNotes" layoutX="8.0" layoutY="65.0" prefHeight="411.0" prefWidth="730.0" style="-fx-border-color: #FFF;" stylesheets="@css/style.css">
+         <columns>
+            <TableColumn fx:id="cDate" prefWidth="130.0" text="Date" />
+            <TableColumn fx:id="cAddress" prefWidth="230.0" text="Address" />
+            <TableColumn fx:id="cCustomer" prefWidth="210.0" text="Customer" />
+            <TableColumn fx:id="cStatus" prefWidth="150.0" text="Status" />
+         </columns>
+      </TableView>
+      <Text layoutX="287.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DELIVERY NOTES">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableViewRoutes" layoutX="38.0" layoutY="66.0" prefHeight="411.0" prefWidth="624.0" visible="false">
+        <columns>
+          <TableColumn fx:id="tcIdRoute" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tcDelvMan" prefWidth="140.0" text="DELIVERY MAN" />
+        </columns>
+      </TableView>
+      <GoogleMapView fx:id="googleMap" layoutY="500.0" prefHeight="352.0" prefWidth="1000.0" />
+      <Text fx:id="textName" layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALL" wrappingWidth="239.6962890625">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

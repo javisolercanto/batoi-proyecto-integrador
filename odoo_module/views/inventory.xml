@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- actions opening views on models -->
+        <act_window id="go_to_inventory"
+                    name="Inventory"
+                    res_model="batoi_logic.inventory"
+                    view_mode="tree,kanban,form"/>
+
+        <!-- Top menu item -->
+        <menuitem name="Inventory"
+                  id="inventory_menu"
+                  parent="main_menu_root"
+                  action="go_to_inventory"/>
+
+        <!-- Form view -->
+        <record model="ir.ui.view" id="main_form_inventory">
+            <field name="name">Inventory Form</field>
+            <field name="model">batoi_logic.inventory</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                    </header>
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="product_id"/>
+                                <field name="location"/>
+                            </group>
+			                <group name="group_right">
+                                <field name="stock"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Tree view -->
+        <record id="view_tree_inventory" model="ir.ui.view">
+            <field name="name">Inventory</field>
+            <field name="model">batoi_logic.inventory</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="product_id"/>
+                    <field name="location"/>
+                    <field name="stock"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Filters and search options -->
+        <record id="view_filter_inventory" model="ir.ui.view">
+            <field name="name">Inventory</field>
+            <field name="model">batoi_logic.inventory</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="product_id"/>
+                    <field name="location"/>
+                    <field name="stock"/>
+                    <filter name="filter_stock" string="Stock greater or equal to 10" domain="[('stock', '>=', '10')]"/>  
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>

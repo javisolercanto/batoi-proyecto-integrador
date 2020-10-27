@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 feb. 2020 0:21:54 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="models.BatoiLogicProviderBatoiLogicSupplierOrderRel" table="batoi_logic_provider_batoi_logic_supplier_order_rel" schema="public" optimistic-lock="version">
+        <comment>RELATION BETWEEN batoi_logic_provider AND batoi_logic_supplier_order</comment>
+        <composite-id name="id" class="models.BatoiLogicProviderBatoiLogicSupplierOrderRelId">
+            <key-property name="batoiLogicProviderId" type="int">
+                <column name="batoi_logic_provider_id" />
+            </key-property>
+            <key-property name="batoiLogicSupplierOrderId" type="int">
+                <column name="batoi_logic_supplier_order_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="batoiLogicProvider" class="models.BatoiLogicProvider" update="false" insert="false" fetch="select">
+            <column name="batoi_logic_provider_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="batoiLogicSupplierOrder" class="models.BatoiLogicSupplierOrder" update="false" insert="false" fetch="select">
+            <column name="batoi_logic_supplier_order_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

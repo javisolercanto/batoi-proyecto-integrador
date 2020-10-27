@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://localhost:9999/batoi_logic_db</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">ser</property>
+    <property name="hibernate.show_sql">false</property>
+    <mapping resource="models/BatoiLogicAddress.hbm.xml"/>
+    <mapping resource="models/BatoiLogicCustomer.hbm.xml"/>
+    <mapping resource="models/BatoiLogicBill.hbm.xml"/>
+    <mapping resource="models/BatoiLogicDeliveryMan.hbm.xml"/>
+    <mapping resource="models/BatoiLogicLocation.hbm.xml"/>
+    <mapping resource="models/BatoiLogicPostalCode.hbm.xml"/>
+    <mapping resource="models/BatoiLogicOrder.hbm.xml"/>
+    <mapping resource="models/BatoiLogicProduct.hbm.xml"/>
+    <mapping resource="models/BatoiLogicDeliveryNote.hbm.xml"/>
+    <mapping resource="models/BatoiLogicProvider.hbm.xml"/>
+    <mapping resource="models/BatoiLogicInventory.hbm.xml"/>
+    <mapping resource="models/BatoiLogicLorry.hbm.xml"/>
+    <mapping resource="models/BatoiLogicCity.hbm.xml"/>
+    <mapping resource="models/BatoiLogicSupplierOrder.hbm.xml"/>
+    <mapping resource="models/BatoiLogicProductBatoiLogicProviderRel.hbm.xml"/>
+    <mapping resource="models/BatoiLogicProviderBatoiLogicSupplierOrderRel.hbm.xml"/>
+    <mapping resource="models/BatoiLogicPerson.hbm.xml"/>
+    <mapping resource="models/BatoiLogicOrderLine.hbm.xml"/>
+    <mapping resource="models/BatoiLogicRoute.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

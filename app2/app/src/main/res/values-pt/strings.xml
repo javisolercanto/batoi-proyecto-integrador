@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="navigation_drawer_open">Gaveta de navegação aberta</string>
+    <string name="navigation_drawer_close">Fechar gaveta de navegação</string>
+    <string name="nav_header_desc">Cabeçalho de navegação</string>
+    <string name="action_settings">Configurações</string>
+
+    <string name="menu_home">Página inicial</string>
+    <string name="menu_map">Mapa</string>
+
+    <string name="btLogin">Assinar em</string>
+    <string name="tvName">Apelido</string>
+
+    <string name="activity_login">Conecte-se</string>
+    <string name="itLogOut">Sair</string>
+    <string name="nav_orders">Encomendas</string>
+
+    <string name="distribution_center">Centro de distribuição</string>
+    <string name="tvStatus">STATUS</string>
+    <string name="etObservations">Observações</string>
+    <string name="btnCancel">CANCELAR</string>
+    <string name="btnAccept">ACEITAR</string>
+
+    <string name="welcome">Bem-vinda</string>
+    <string name="empty_fields">Campos vazios</string>
+    <string name="interrupted">Interrompida</string>
+    <string name="nickname_not_found">Apelido não encontrado</string>
+    <string name="network_not_available">Rede indisponível, tente novamente mais tarde</string>
+    <string name="address_incorrect">Endereço incorreto</string>
+    <string name="select_the_action">Selecione a ação</string>
+    <string name="no_phone_available">Nenhum telefone disponível!</string>
+    <string name="about_your_order">Sobre o seu pedido</string>
+    <string name="confirmation">Confirmação</string>
+    <string name="impossible_to_update">Impossível atualizar o STATUS agora!</string>
+    <string name="retrieving_information">Recuperando informações ...</string>
+    <string name="location_not_found">Local não encontrado</string>
+    <string name="order_number">NÚMERO DO PEDIDO:</string>
+    <string name="customer">CLIENTE:</string>
+    <string name="location">LOCALIZAÇÃO:</string>
+
+    <string name="customer_customer">1 -  Cliente Cliente</string>
+    <string name="location_enable">A localização DEVE estar ativada!</string>
+
+    <string-array name="status">
+        <item>Saiu para entrega</item>
+        <item>Entregue</item>
+        <item>Não entregue</item>
+    </string-array>
+
+    <string-array name="actions">
+        <item>Telefone aberto</item>
+        <item>Abrir Email</item>
+        <!--        <item></item>-->
+    </string-array>
+    <string name="action">Açao</string>
+    <string name="no_internet">Sem Internet, tente novamente mais tarde!</string>
+    <string name="password_incorrect">Senha incorreta</string>
+    <string name="permissions_neccesary">Esta permissão é necessária!</string>
+    <string name="send_mail">Enviar correio...</string>
+    <string name="this_action">Esta ação não pode ser desfeita, você tem certeza de que está atualizando para %1$s ?</string>
+    <string name="tvPassword">Senha</string>
+    <string name="error">Erro</string>
+    <string name="ok" translatable="false">Está bem</string>
+    <string name="action_refresh">Atualizar</string>
+    <string name="location_service_is_needed">" O serviço de localização é necessário o tempo todo"</string>
+    <string name="no_internet_available">Sem Internet Disponível</string>
+    <string name="alert_location">NÚMERO DO PEDIDO:% 1$s \nCLIENTE: %2$s \nLOCALIZAÇÃO: %3$s</string>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: FFF;" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerOrdersDetail">
+   <children>
+      <AnchorPane layoutX="750.0" prefHeight="500.0" prefWidth="250.0" style="-fx-background-color: F20000;" stylesheets="@css/style.css">
+         <children>
+            <ImageView fx:id="btnPrint" layoutX="77.0" layoutY="50.0" onMouseClicked="#print">
+               <image>
+                  <Image url="@images/print-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnBack" layoutX="77.0" layoutY="353.0" onMouseClicked="#back">
+               <image>
+                  <Image url="@images/back-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnCancel" layoutX="77.0" layoutY="202.0" onMouseClicked="#cancel">
+               <image>
+                  <Image url="@images/cancel-order-white.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Text fill="WHITE" layoutX="106.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRINT">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="textHistoryOrPending" fill="WHITE" layoutX="75.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CANCEL ORDER">
+               <font>
+                  <Font name="Ubuntu Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text fx:id="textOrderNumber" layoutX="292.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="002" textAlignment="CENTER" wrappingWidth="162.5732421875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="textDate" layoutX="37.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="21-03-2020">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="textStatus" layoutX="546.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PENDING" textAlignment="CENTER" wrappingWidth="162.5732421875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tvOrderLines" fixedCellSize="0.0" layoutX="13.0" layoutY="61.0" onMouseClicked="#onTableClicked" prefHeight="322.0" prefWidth="720.0" style="-fx-selection-bar: #F20000;" stylesheets="@css/style.css">
+        <columns>
+          <TableColumn fx:id="cLine" editable="false" maxWidth="80.0" minWidth="80.0" resizable="false" sortable="false" />
+          <TableColumn fx:id="cImage" editable="false" maxWidth="240.0" minWidth="240.0" prefWidth="240.0" resizable="false" sortable="false" />
+            <TableColumn fx:id="cProductName" editable="false" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" sortable="false" />
+            <TableColumn fx:id="cQuantity" editable="false" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" resizable="false" sortable="false" />
+            <TableColumn fx:id="cPrice" editable="false" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" resizable="false" sortable="false" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TextArea id="observations-text-field" fx:id="textAreaObservations" editable="false" layoutX="37.0" layoutY="396.0" prefHeight="77.0" prefWidth="516.0" promptText="No observations" stylesheets="@css/style.css">
+         <font>
+            <Font name="Ubuntu" size="18.0" />
+         </font>
+      </TextArea>
+      <Text layoutX="565.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL" textAlignment="CENTER" wrappingWidth="136.5732421875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="textTotal" layoutX="565.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0€" textAlignment="CENTER" wrappingWidth="136.5732421875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <ProgressBar fx:id="pbLoad" layoutX="274.0" layoutY="227.0" prefWidth="200.0" progress="0.0" />
+   </children>
+</AnchorPane>
